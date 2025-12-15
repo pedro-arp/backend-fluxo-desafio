@@ -81,4 +81,4 @@ async def upload_lighting_data(file: UploadFile, db: Session = Depends(get_db)):
                 "duplicate_values": duplicated_posts
                 }
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(status_code=400, detail=str(e))
