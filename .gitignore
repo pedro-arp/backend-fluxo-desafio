@@ -2,6 +2,23 @@
 *.pyc
 __pycache__
 venv
+env
+.venv
 .env
 /.env
 .idea
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
