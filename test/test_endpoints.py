@@ -16,23 +16,24 @@ def test_ingest_data():
         assert response.status_code == 200
         response_json = response.json()
 
-        # Teste se a resposta contém todos os campos esperados
+        # Teste se a resposta contém todos os campos esperados (ajustados)
         assert "message" in response_json
-        assert "duplicated_values" in response_json
-        assert "failed_lines" in response_json
+        assert "duplicate_values_in_file" in response_json
+        assert "duplicate_values_in_db" in response_json
 
         # Teste o conteúdo da mensagem
         assert "Inseridos" in response_json["message"]
         assert "registros com sucesso" in response_json["message"]
 
         # Teste o conteúdo dos valores duplicados, se aplicável
-        assert isinstance(response_json["duplicated_values"], list)
-        assert isinstance(response_json["failed_lines"], list)
+        assert isinstance(response_json["duplicate_values_in_file"], list)
+        assert isinstance(response_json["duplicate_values_in_db"], list)
 
 # Teste para o endpoint de consulta de dados
 def test_get_lighting_posts():
     response = client.get("/lighting-posts?page=1&page_size=5")
     assert response.status_code == 200
-    assert "posts" in response.json()
-    assert "total" in response.json()
-    assert len(response.json()["posts"]) <= 5
+    json_body = response.json()
+    assert "posts" in json_body
+    assert "total" in json_body
+    assert len(json_body["posts"]) <= 5
