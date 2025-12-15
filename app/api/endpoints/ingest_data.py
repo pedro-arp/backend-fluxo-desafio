@@ -7,7 +7,7 @@ from sqlalchemy.exc import IntegrityError
 from datetime import datetime
 from openpyxl.utils.datetime import from_excel
 
-ingest_router = APIRouter()
+ingest_router = APIRouter(prefix="/lighting-data", tags=["lighting-posts"])
 def get_db():
     db = SessionLocal()
     try:
@@ -25,7 +25,7 @@ def process_date(value):
             return None
     return None
 
-@ingest_router.post("/lighting-data/upload")
+@ingest_router.post("/upload")
 async def upload_lighting_data(file: UploadFile, db: Session = Depends(get_db)):
     duplicated_posts = []
     already_in_db = []
