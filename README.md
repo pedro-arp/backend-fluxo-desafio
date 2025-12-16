@@ -86,6 +86,22 @@ O objetivo deste desafio é demonstrar organização de código, boas práticas 
 - Registros únicos inseridos no banco.
 - Registros duplicados não inseridos.
 
+   ```bash
+   {
+    "message": "Inseridos 0 registros com sucesso.",
+    "duplicate_values_in_file": [
+        {
+            "id": "P-0000",
+            "address": "Rua"
+        }
+         ],
+    "duplicate_values_in_db": [
+        {
+            "id": "P-0001"
+        }
+        ]
+   }
+   ```
 ---
 
 ### **`/lighting-posts`**
@@ -104,7 +120,32 @@ curl --location 'http://localhost:8000/lighting-posts?page_size=30&page=1&needs_
 
 #### **Resposta**:
 - Lista de registros encontrados (paginada).
-
+```bash
+{
+    "page": 1,
+    "page_size": 1,
+    "total": 1,
+    "posts": [
+        {
+            "id": "P-000",
+            "address": "Avenida",
+            "location": {
+                "lat": -19.934429,
+                "long": -43.903419
+            },
+            "equipment": {
+                "type": "LED",
+                "wattage": 80,
+                "voltage": 220
+            },
+            "maintenance": {
+                "needs_repair": true,
+                "last_maintenance": "1932-09-15"
+            }
+        }
+    ]
+}
+```
 ---
 
 ## 🚀 Docker
