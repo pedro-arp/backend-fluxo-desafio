@@ -14,7 +14,7 @@ O objetivo deste desafio é demonstrar organização de código, boas práticas 
   - **`endpoints/`**: Endpoints da API.
   - **`db/`**: Configurações e lógica do banco de dados (CRUD, modelos, etc.).
 - **`test/`**: Testes automatizados para validação da aplicação.
-
+- **`desafio-upload-iluminacao/`**: Arquivo xlsx que deve ser tratado e explicação do Desafio. 
 ---
 
 ## 🛠️ Configuração e Instalação
