@@ -1,6 +1,8 @@
 # 🌟 Backend Fluxo Desafio 🚀
 
-Um backend desenvolvido em **Python** com **FastAPI** para gerenciar dados de iluminação pública extraídos de arquivos **Excel (.xlsx)**. Utiliza **SQLAlchemy** para o banco de dados e **pytest** para testes automatizados.
+Este projeto consiste no desenvolvimento de uma API RESTful para gestão de dados de infraestrutura de iluminação pública. Utilizando **Python 3.13** e o framework **FastAPI**, a aplicação permite ingerir planilhas no formato `xlsx`, tratar e armazenar os dados em um banco de dados relacional, além de disponibilizar endpoints para consulta com suporte a filtros e paginação.
+
+O objetivo deste desafio é demonstrar organização de código, boas práticas de desenvolvimento e competência técnica ao implementar os requisitos obrigatórios, com a possibilidade de adicionar diferenciais técnicos como containerização, testes automatizados e um design de API otimizado.
 
 ---
 
