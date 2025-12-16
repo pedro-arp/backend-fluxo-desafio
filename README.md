@@ -23,6 +23,7 @@ O objetivo deste desafio é demonstrar organização de código, boas práticas 
 - **Python 3.13**
 - **pip** (Gerenciador de pacotes Python)
 - Banco de dados SQLite (configuração padrão)
+- **PostMan** (Recomendado)
 
 ### Instalação
 
