@@ -41,10 +41,10 @@ Um backend desenvolvido em **Python** com **FastAPI** para gerenciar dados de il
    pip install -r requirements.txt
    ```
 
-4. (Opcional) Configure variáveis de ambiente:
+4. Configure variáveis de ambiente:
    Crie um arquivo `.env` na raiz do projeto:
    ```
-   DATABASE_URL=sqlite:///fluxo.db
+   DATABASE_URL=sqlite:///./fluxo.db
    ```
 
 ---
@@ -122,9 +122,6 @@ O projeto oferece suporte ao **Docker**.
    ```
    - Acesse em: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-> **Nota:** Migrações com Alembic ocorrem automaticamente ao iniciar o container.
-
----
 
 ## 🧪 Testes Automatizados
 
